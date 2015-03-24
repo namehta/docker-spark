@@ -18,7 +18,7 @@ RUN chown root.root /etc/bootstrap.sh
 RUN chmod 700 /etc/bootstrap.sh
 
 # Spark environment
-ENV SPARK_WORKER_MEMORY 2g
+ADD spark-env.sh $SPARK_HOME/conf/spark-env.sh
 
 EXPOSE 7077 8080 8081 4040
 
