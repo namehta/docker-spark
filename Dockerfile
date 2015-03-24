@@ -17,6 +17,9 @@ COPY bootstrap.sh /etc/bootstrap.sh
 RUN chown root.root /etc/bootstrap.sh
 RUN chmod 700 /etc/bootstrap.sh
 
-EXPOSE 7077 8080 8081 8020 9000
+# Spark environment
+ENV SPARK_WORKER_MEMORY 2g
+
+EXPOSE 7077 8080 8081 4040
 
 ENTRYPOINT ["/etc/bootstrap.sh"]
