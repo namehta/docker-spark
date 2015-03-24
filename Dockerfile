@@ -17,6 +17,6 @@ COPY bootstrap.sh /etc/bootstrap.sh
 RUN chown root.root /etc/bootstrap.sh
 RUN chmod 700 /etc/bootstrap.sh
 
-EXPOSE 7077 8080 8020 9000
+EXPOSE 7077 8080 8081 8020 9000
 
 ENTRYPOINT ["/etc/bootstrap.sh"]
