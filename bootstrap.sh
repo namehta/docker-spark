@@ -16,7 +16,6 @@ sed s/HOSTNAME/$HOSTNAME/ /usr/local/hadoop/etc/hadoop/core-site.xml.template > 
 service sshd start
 $HADOOP_PREFIX/sbin/start-dfs.sh
 $HADOOP_PREFIX/sbin/start-yarn.sh
-$SPARK_HOME/sbin/start-all.sh
 
 CMD=${1:-"exit 0"}
 if [[ "$CMD" == "-d" ]];
